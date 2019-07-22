@@ -4,6 +4,9 @@ const Lee ={
     gender:"Male"
 }
 
+
+//Query person in graph ql returns an Lee Object 
+
 const resolvers ={
     Query: {
         person:() => Lee
