@@ -1,6 +1,13 @@
+type Lee {
+    name:String!,
+    age:Int!,
+    gender:String!
+}
+
 type Query{
 
-    name: String!
+    person: Lee!
 
 }
 
+ 

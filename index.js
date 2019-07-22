@@ -7,5 +7,5 @@ const server = new GraphQLServer({
     resolvers:resolvers 
 })
 
-//GraphQL playground in local host : 4000
+//GraphQL playground in local host : 4000 (Like Postman)
 server.start(() => console.log("GraphQL Server Running..."))
