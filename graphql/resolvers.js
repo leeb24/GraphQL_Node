@@ -1,15 +1,12 @@
-const Lee ={
-    name:"Lee",
-    age:18,
-    gender:"Male"
-}
+import {people,getById} from "./db"
 
 
 //Query person in graph ql returns an Lee Object 
-
+//args is the provided query arguments 
 const resolvers ={
     Query: {
-        person:() => Lee
+        people:() => { return people },
+        person:(_, args) => getById(args.id)
     }
 };
 
