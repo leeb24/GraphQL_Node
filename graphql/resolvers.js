@@ -1,4 +1,4 @@
-import {people,getById} from "./db"
+import {people,getById,getMovies,deleteMovie,movies,getMovie,addMovie} from "./db"
 
 
 //Query person in graph ql returns an Lee Object 
@@ -6,7 +6,14 @@ import {people,getById} from "./db"
 const resolvers ={
     Query: {
         people:() => { return people },
-        person:(_, args) => getById(args.id)
+        person:(_, args) => getById(args.id),
+
+        movies:() => getMovies(),
+        movie:(_,args) => getMovie(args.id)
+
+    },
+    Mutation:{
+        addMovie:(_,{name,score}) => addMovie(name,score)
     }
 };
 
